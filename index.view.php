@@ -8,15 +8,15 @@
 	</head>
 	<body>
 	<ul>
-<?php foreach($taskarray as $task) : ?>
+<?php foreach($tasks as $task) : ?>
 
 <li>
-<?php if($task->getComplete()) : ?>	
+<?php if($task->completed) : ?>	
 <strike>
-<strong><?= $task->getDescription() ?></strong></li>
+<strong><?= $task->description ?></strong></li>
 </strike>
 <?php else : ?>
-<strong><?= $task->getDescription() ?></strong></li>
+<strong><?= $task->description ?></strong></li>
 <?php endif; ?>
 <?php endforeach; ?>
 </ul>
