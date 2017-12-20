@@ -12,7 +12,7 @@ function connectToDb()
 {
 try{
 //Change psswd to **** if working -DONE
-return new PDO('mysql:host=127.0.0.1;dbname=myTodo', 'root', '*****');
+return new PDO('mysql:host=127.0.0.1;dbname=myTodo', 'root', '******');
 } catch(PDOException $e){
 die($e->getMessage());
 }
