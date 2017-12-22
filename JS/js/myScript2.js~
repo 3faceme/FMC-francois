@@ -1,0 +1,54 @@
+function myinner() {
+document.getElementById("demo").innerHTML = 5 + 6;
+}
+
+myinner();
+
+function mywrite() {
+document.write(5 + 6);
+}
+
+mywrite();
+
+function myalert()
+{
+window.alert(5 + 6);
+}
+
+myalert();
+
+function myconsole(){
+	 console.log(5 + 6);
+	 }
+	 
+	 myconsole();
+	 
+function var_multi(){
+
+var person = "John Doe", carName = "Volvo", price = 200;
+document.getElementById("demo").innerHTML = carName;	
+	}
+	var_multi();
+	
+	
+	function eval_datatype() {
+var x = 16 + 4 + "Volvo";
+var y = "Volvo" + 16 + 4; 	
+document.getElementById("demo").innerHTML = x + "<br/>" + y;
+
+
+	}
+	
+	eval_datatype();
+	
+	function test_equalequal()
+	{
+	var x = 5;
+var y = 5;
+var z = 6;
+document.getElementById("demo").innerHTML =
+(x == y) + "<br>" + (x == z) + "<br>" + (x === y) + "<br>" + (x === x)
+
+}
+
+test_equalequal();

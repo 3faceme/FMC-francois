@@ -7,13 +7,20 @@ require 'Task.php';
 
 /* START PDO TASK */
 
+//the bootstrap.php PART that I could not implement because of the exception ** STARTS HERE
 require 'database/Connection.php';
 
 require 'database/QueryBuilder.php';
 
+$config = require 'config.php';
+
 
 	
-$query = new QueryBuilder(Connection::make());
+$query = new QueryBuilder(
+
+Connection::make($config['database']));
+
+// Bootstrap.php ** ENDS HERE
 
 $tasks = $query->selectAll('todos');
 
