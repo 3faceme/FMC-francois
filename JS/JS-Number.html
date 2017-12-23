@@ -1,0 +1,65 @@
+
+Result Size: 668 x 494
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+​
+
+<h2>JavaScript Numbers</h2>
+
+​
+
+<p>A common mistake is to expect this result to be 30:</p>
+
+​
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+​
+<p id="demo3"></p>
+
+<p id="demo4"></p>
+<script>
+
+var x1 = 10;
+
+var y1 = 20;
+
+document.getElementById("demo1").innerHTML =
+
+"The result is: " + x1 + y1;
+
+
+var x2 = NaN;
+document.getElementById("demo2").innerHTML = typeof x2;
+
+var myNumber = 2; 
+var txt = "";
+while (myNumber != Infinity) {
+   myNumber = myNumber * myNumber;
+   txt = txt + myNumber + "<br>";
+}
+document.getElementById("demo3").innerHTML = txt;
+
+var x = 0xFF;
+document.getElementById("demo4").innerHTML = "0xFF = " + x;
+
+</script>
+
+​
+
+</body>
+
+</html>
+
+​
+
+​
+
+​
+
