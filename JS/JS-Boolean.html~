@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+​
+
+<p>Display the value of Boolean(10 > 9):</p>
+
+​
+
+<button onclick="myFunction()">Try it</button>
+
+​
+
+<p id="demo"></p>
+
+​
+<p id="demo2"></p>
+
+
+<p id="demo3"></p>
+
+<p>Never create booleans as objects (like Arrays).</p>
+<p>Booleans and objects cannot be safely compared.</p>
+
+<p id="demo4"></p>
+
+<script>
+
+function myFunction() {
+
+    document.getElementById("demo").innerHTML = Boolean(10 > 9);
+
+}
+
+
+var t1 = Boolean(100);
+var t2 = Boolean(3.14);
+var t3 = Boolean(-15);
+var t4 = Boolean("Hello");
+var t5 = Boolean('false');
+var t6 = Boolean(1 + 7 + 3.14);
+
+document.getElementById("demo2").innerHTML =
+"100 is " + t1 + "<br>" +
+"3.14 is " + t2 + "<br>" +
+"-15 is " + t3 + "<br>" +
+"Any (not empty) string is " + t4 + "<br>" +
+"Even the string 'false' is " + t5 + "<br>" +
+"Any expression (except zero) is " + t6;
+
+
+var x = 10 / "H";
+
+var undefined;
+var f1 = Boolean(0);
+var f2 = Boolean(-0);
+var f3 = Boolean("");
+var f4 = Boolean(undefined);
+var f5 = Boolean(null);
+var f6 = Boolean(x);
+
+document.getElementById("demo3").innerHTML =
+"0 is " + f1 + "<br>" +
+"-0 is " + f2 + "<br>" +
+"empty space is " + f3 + "<br>" +
+"undefined variable is " + f4 + "<br>" +
+"Null value is " + f5 + "<br>" +
+"NaN is " + f6;
+
+
+
+var x2 = false;               // x is a boolean
+var y2 = new Boolean(false);  // y is an object
+document.getElementById("demo4").innerHTML =
+typeof x2 + "<br>" + typeof y2;
+
+</script>
+
+</body>
+
+</script>
+
+​
+
+</body>
+
+</html>
+
+​
+
+<strong></strong>
