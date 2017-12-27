@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript constructor Property</h2>
+
+<p>The constructor property returns the constructor function for a variable or an 
+object.</p>
+
+<p id="demo"></p>
+
+<p>This "home made" isArray() function returns true when used on an array:</p>
+
+<p id="demo2"></p>
+
+<p>The String() method can convert a number to a string.</p>
+
+<p id="demo3"></p>
+
+<p>The typeof operator returns the type of a variable or expression.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo4"></p>
+
+<p>
+Automatic Type Conversion
+
+When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.
+
+The result is not always what you expect:
+</p>
+
+<p id="demo5"></p>
+
+
+<script>
+document.getElementById("demo").innerHTML = 
+    "john".constructor + "<br>" +
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name:'john', age:34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function () {}.constructor;
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo2").innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+    return myArray.constructor === Array;
+}
+
+
+var x = 123;
+document.getElementById("demo3").innerHTML =
+  String(x) + "<br>" +
+  String(123) + "<br>" +
+  String(100 + 23);
+
+function myFunction() {
+    var y = "5";
+    var x = + y;
+    document.getElementById("demo4").innerHTML =
+    typeof y + "<br>" + typeof x;
+}
+
+var x = [];
+document.getElementById("demo5").innerHTML =
+(5 + null) + "<br>"  +
+("5" + null) + "<br>" +
+("5" + 2) + "<br>" +
+("5" - 2) + "<br>" +
+("5" * "2") + "<br>" +
+("5" / "2") + "<br>"
+
+</script>
+
+</body>
+</html>
+
+

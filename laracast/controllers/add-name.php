@@ -1,5 +1,8 @@
-<?
+<?php
 
+$app['database']->insert('users',
+[
+'name' => $_POST['name'] 
+] );
 
-
-var_dump("You typed: " . $_POST['name']);
+header('location: /');

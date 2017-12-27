@@ -1,5 +1,9 @@
 <?php
 
+
+// Composer autoloading here: 
+require 'vendor/autoload.php';
+
 $query = require 'core/bootstrap.php';
 
 require 'Task.php';

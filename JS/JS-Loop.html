@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+​
+
+<h2>JavaScript Loops</h2>
+
+​
+
+<p>The for/in statement loops through the properties of an object.</p>
+
+​
+
+<p id="demo"></p>
+
+<p>Using break; here:</p>
+
+<p id="demo2"></p>
+​
+
+<p>Using contine; here:</p>
+
+<p id="demo3"></p>
+
+<p>Using break; will jump out of any block, unlike continue; limited to loop blocs:</p>
+
+<p id="demo4"></p>
+
+<script>
+
+var txt = "";
+
+var person = {fname:"John", lname:"Doe", age:25}; 
+
+var x;
+
+for (x in person) {
+
+    txt += person[x] + " ";
+
+}
+
+document.getElementById("demo").innerHTML = txt;
+
+
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo2").innerHTML = text;
+
+var text2 = "";
+var j;
+for (j = 0; j < 10; j++) {
+    if (j === 3) { continue; }
+    text2 += "The number is " + j + "<br>";
+}
+document.getElementById("demo3").innerHTML = text2;
+
+
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text3 = "";
+
+list: {
+    text3 += cars[0] + "<br>"; 
+    text3 += cars[1] + "<br>"; 
+    text3 += cars[2] + "<br>"; 
+    break list;
+    text3 += cars[3] + "<br>"; 
+    text3 += cars[4] + "<br>"; 
+    text3 += cars[5] + "<br>"; 
+}
+
+document.getElementById("demo4").innerHTML = text3;
+
+</script>
+
+
+</body>
+
+</html>
+
+​
+

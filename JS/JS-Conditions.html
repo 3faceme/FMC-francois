@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+​
+
+<p>Input your age and click the button:</p>
+
+​
+
+<input id="age" value="18" />
+
+​
+
+<button onclick="myFunction()">Try it</button>
+
+​
+
+<p id="demo"></p>
+
+​
+<p>Some unexpected results such as "2" > "12" is equal to true!</p>
+
+<p id="demo2"></p>
+
+<p>Click the button to display a time-based greeting:</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="demo3"></p>
+
+<script>
+
+function myFunction() {
+
+    var age, voteable;
+
+    age = document.getElementById("age").value;
+
+    voteable = (age < 18) ? "Too young":"Old enough";
+
+    document.getElementById("demo").innerHTML = voteable + " to vote.";
+
+}
+
+document.getElementById("demo2").innerHTML = "2" > "12";
+
+function myFunction3() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 10) {
+        greeting = "Good morning";
+    } else if (time < 20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo3").innerHTML = greeting;
+}
+
+</script>
+
+​
+
+</body>
+
+</html>
+
+​
+
