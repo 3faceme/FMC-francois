@@ -1,4 +1,4 @@
-<?
+<?php
 
 /* 
 the bootstrap.php PART that I could not implement because of the exception
