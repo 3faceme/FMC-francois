@@ -1,6 +1,6 @@
 <?php
 
-//$query = require 'bootstrap.php';
+$query = require 'bootstrap.php';
 
 require 'Task.php';
 
@@ -14,7 +14,7 @@ Stack trace:
 #0 {main}
   thrown in /home/zebulon/Documents/FlyMyCloud/html.git/laracast/index.php on line 10
 ** STARTS HERE
-*/
+
 require 'database/Connection.php';
 
 require 'database/QueryBuilder.php';
@@ -25,7 +25,7 @@ $config = require 'config.php';
 $query = new QueryBuilder(
 
 Connection::make($config['database']));
-
+*/
 // Bootstrap.php ** ENDS HERE
 
 $tasks = $query->selectAll('todos');
