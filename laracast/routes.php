@@ -1,22 +1,12 @@
 <?php
 
-/*
-$router->define([
-'' => 'controllers/index.php',
-'about' => 'controllers/about.php',
-'about/culture' => 'controllers/about-culture.php',
-'contact' => 'controllers/contact.php',
-'names' => 'controllers/add-name.php'
-]);
-*/
 
-$router->get('', 'controllers/index.php');
+$router->get('', 'PagesController@home');
 
-$router->get('about', 'controllers/about.php');
+$router->get('about', 'PagesController@about');
 
-$router->get('about/culture', 'controllers/about-culture.php');
+$router->get('contact', 'PagesController@contact');
 
+$router->get('users', 'UsersController@index');
 
-$router->post('names', 'controllers/add-name.php');
-
-//var_dump($router->routes);
+$router->post('users', 'UsersController@store');

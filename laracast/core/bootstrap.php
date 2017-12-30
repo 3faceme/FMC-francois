@@ -1,17 +1,22 @@
 <?php
 
-//the bootstrap.php PART that I could not implement because of the exception ** STARTS HERE
+App::bind('config', require 'config.php');
+
+$config = App::get('config');
 
 
-$app = [];
+//die(var_dump(App::get('config')));
 
-
-$app['config'] = require 'config.php';
-
-
+App::bind('database', new QueryBuilder(
+	Connection::make(App::get('config')['database'])
+	));
 	
-$app['database'] = new QueryBuilder(
 
-Connection::make($app['config']['database']));
+function view($name, $data = []){
+	extract($data);
+return require "views/{$name}.view.php";
+}
 
-// Bootstrap.php ** ENDS HERE
+function redirect($path){
+header("Location: /{$path}");
+}
